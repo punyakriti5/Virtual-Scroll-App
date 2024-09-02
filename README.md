@@ -88,13 +88,22 @@ Rendering Items: Ensures that items are rendered after they are fetched.
 
 Common Issues
 ---------------------------------------------------------------------------------------------
+Large JavaScript Bundle Size
 
-Network Delay Handling:
-Ensure that the simulated delay on the server does not exceed the timeout settings in the test environment.
+Issue: Slow load times due to large initial bundle.
+Solution: Implemented code splitting with React's React.lazy and Suspense to reduce the initial bundle size.
+Uncompressed Assets
+
+Issue: Slow asset downloads due to uncompressed files.
+Solution: Enabled Gzip compression on the server to compress JavaScript and CSS files.
+Long JavaScript Execution Time
+
+Issue: Inefficient rendering in virtualized lists.
+Solution: Implemented react-window for virtual scrolling to improve rendering performance.
+
+Issue: Network Delay Handling:
+Soulation: Ensure that the simulated delay on the server does not exceed the timeout settings in the test environment.
 Increase Jest timeout if necessary by adding jest.setTimeout(10000); in the setupTests.js or the specific test file.
-
-Mocking Dependencies:
-Ensure that axios is mocked correctly in the test files to simulate server responses.
 
 React Testing Warnings:
 Use act to wrap state updates in tests if encountering warnings related to unwrapped updates.

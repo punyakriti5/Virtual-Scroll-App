@@ -2,7 +2,8 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 const port = 3001;
-
+const compression = require('compression');
+app.use(compression());
 app.use(cors());
 
 // Generate a large dataset
