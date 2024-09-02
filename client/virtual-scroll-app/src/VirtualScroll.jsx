@@ -1,9 +1,8 @@
-
-
 import React, { useState, useEffect } from 'react';
 import { FixedSizeList as List } from 'react-window';
 import AutoSizer from 'react-virtualized-auto-sizer';
 const axios = require('axios');
+
 
 const VirtualScroll = () => {
   const [items, setItems] = useState([]);
@@ -67,5 +66,4 @@ const VirtualScroll = () => {
     </div>
   );
 };
-
-export default VirtualScroll;
+ export default VirtualScroll;
