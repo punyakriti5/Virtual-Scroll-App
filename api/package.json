@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "terser src/bundle.js -o dist/bundle.min.js"
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
@@ -14,8 +13,5 @@
     "compression": "^1.7.4",
     "cors": "^2.8.5",
     "express": "^4.19.2"
-  },
-  "devDependencies": {
-    "terser": "^5.31.6"
   }
 }
